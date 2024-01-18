@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.min.css"/>
+
+
+</head>
+    <style>
+*{
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    margin: 0px;
+    background-color: aliceblue;
+}
+
+.container {
+    width: 1000px;
+    height: auto;
+    margin: 10px auto;
+    background-color: white;
+    border: 1px solid gainsboro;
+    box-shadow: 0px 0px 25px rgba(0,0,0,0.1);
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+}
+
+.search-holder form > input[type="search"]{
+    border: 1px solid gainsboro;
+    padding: 10px;
+}
+.search-holder form > button[type="submit"] {
+
+    background-color: black;
+    color: white;
+    padding: 11px;
+    border: 0px;
+margin-left: -5px;
+}
+
+.main-menu {
+    background-color: black;
+    color:white
+
+}
+
+.main-menu > ul {
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+    display: flex;
+    justify-content: start;
+}
+.main-menu > ul > li > a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: inline-block;
+}
+.main-menu > ul > li > a:hover {
+    background-color: orange;
+}
+
+.drop {
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+    position: absolute;
+    display: none;
+}
+
+.drop > li > a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    background-color: teal;
+    display: inline-block;
+    width: 100%;
+}
+
+.drop > li > a:hover{
+    background-color: orange;
+}
+
+.main-menu > ul > li:hover .drop {
+    display: block;
+}
+.lSPager {
+    margin-top: -25px !important;
+}
+.content-holder {
+    display:flex;
+    justify-content: space-between;
+    background-color: cornflowerblue;
+    border-bottom: 1px solid gainsboro;
+}
+.content-holder .content {
+    padding: 25px;
+    background-color: white;
+    width: 80%;
+}
+
+.content-holder .content h1 ~ h2 {
+    font-size: 1em;
+    color: darkgray;
+}
+
+.sidebar {
+    padding: 25px;
+    width: 20%;
+}
+
+.sidebar .widget h3 {
+    color: white;
+}
+.sidebar .widget ul ,
+.footer-widget ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.sidebar .widget ul > li > a ,
+.footer-widget ul > li > a{
+    color: white;
+    text-decoration: none;
+}
+.sidebar .widget ul > li > a:hover {
+    color: black;
+}
+.footer-widget-holder {
+    display:flex;
+    background-color: rgb(31, 31, 31);
+color: white;
+justify-content: space-around;
+}
+
+.footer-widget {
+    padding: 25px;
+    font-size: small;
+}
+
+.site-footer {
+    background-color: black;
+    color:white;
+    text-align: center;
+    padding: 25px;
+}
+
+.site-footer p {
+    margin: 0px;
+}
+.products-holder, 
+.services-holder {
+    display: grid;
+    grid-template-columns: auto auto auto ;
+
+
+}
+.product,
+.service {
+    padding: 20px;
+    border: 1px solid gainsboro;
+
+}
+.product a,
+.service a {
+    text-decoration: none;
+    color: teal;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+}
+
+.gmap {
+    width: 100%;
+    height: 400px;
+    border-bottom: 1px solid gainsboro;
+}
+.gmap iframe {
+    width: 100%;
+    height: 400px;
+}
+
+.contact-details {
+    display: flex;
+    justify-content: space-between;
+}
+.contact-form ,
+.time-contact {
+
+    padding: 15px;
+    width: 50%;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+.contact-form form input,
+.contact-form form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0px;
+}
+
+.contact-form form button {
+    display: inline-block;
+    width: 105%;
+    padding: 10px;
+}
+
+    </style>
+</head>
+<body>
+    
+<div class="container">
+    <header class="main-header">
+        <div class="logo-holder">
+            <a href="#">
+                <img src="./1600w-qJptouniZ0A.webp" alt="logo" width="50px">
+            </a>
+        </div>
+
+        <div class="search-holder">
+            <form action="" method="get">
+                <input type="search" name="s" placeholder="search for..">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </header>
+
+    <!--nav-->
+
+    <nav class="main-menu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Service</a>
+            <ul class="drop">
+                <li><a href="#">Service one</a></li>
+                <li><a href="#">Service Two</a></li>
+                <li><a href="#">Service Three</a></li>
+            </ul>
+            </li>
+            <li><a href="#">Product</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+ </ul>
+ </nav>
+
+ 
+<!--map-->
+
+<section class="gmap">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3549.4005540576477!2d78.03956727455343!3d27.175144776491635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39747121d702ff6d%3A0xdd2ae4803f767dde!2sTaj%20Mahal!5e0!3m2!1sen!2sin!4v1705556274498!5m2!1sen!2sin" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
+ 
+    <!--contact-->
+
+    <section class="contact-details">
+        <div class="contact-form">
+            <form action="" method="post">
+                <label for="c_name">
+                    Name :
+                    <input type="text" name="c_name" 
+                    id="c_name" placeholder="Name">
+                </label>
+
+                <label for="c_email">
+                    Email :
+                    <input type="e-mail" name="c_email" 
+                    id="c_email" placeholder="email">
+                </label>
+                <label for="c_phone">
+                    Phone:
+                    <input type="tel" name="c_phone" 
+                    id="c_phone" placeholder="mobile no">
+                </label>
+                <label for="c_message">
+                    Message:
+                    <textarea name="c_message" id=""
+                    cols="30" rows="5"></textarea>
+                </label>
+                <br>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+
+        <div class="time-contact">
+            <h3>Timings</h3>
+            <p><strong>Mon - Sat</strong> <time datetime="09:00"> 09-00AM</time>
+            <time>-</time>
+        <time datetime="17:00">05-00PM</time>
+        </p>
+        <hr>
+        <h3>Contact</h3>
+        <p><a href="yuktanagaraj@yahoo.com">yuktanagaraj@yahoo.com</a></p>
+        </div>
+    </section>
+
+ <!--footer-->
+ <section class="footer-widget-holder">
+    <div class="footer-widget">
+        <a href="#">
+            <img src="./1600w-qJptouniZ0A.webp" width="50px" alt="logo">
+        </a>
+        <h3>Address</h3>
+        <address>
+            #12/ A pushpagiri
+        </address>
+    </div>
+
+    <div class="footer-widget">
+        <h4>Sitemap</h4>
+        <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">service</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        </ul>
+        </div>
+
+        <div class="footer-widget">
+        <h4>Sitemap</h4>
+        <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">service</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        </ul>
+        </div>
+        <div class="footer-widget">
+        <h4>Sitemap</h4>
+        <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">service</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+ </section>
+
+ <footer class="site-footer">
+    <p><small>Copyright &copy</small></p>
+ </footer>
+</div>
+
+<script src ="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js"></script>
+<script>
+    $(document).ready(function() {
+    $('#adaptive').lightSlider({
+        adaptiveHeight:true,
+        item:1,
+        slideMargin:0,
+        loop:true
+    });
+});
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+
+<style>
+    * {
+     font-family: 'Quicksand', sans-serif;}
+
+     body {
+          margin: 0px;
+          background-color: aliceblue;
+     }
+.container {
+     width: 1000px;
+     height: auto;
+     margin: 10px auto;
+     background-color: white;
+     border: 1px solid gainsboro;
+     box-shadow: 0px 0px 25px rgba(0,0,0,0.1);
+}
+     .main-header{
+          display: flex;
+          justify-content: space-between;
+          padding: 25px;
+     }
+     .search-holder  form > input[type="search"]{
+border: 1px solid gainsboro;
+padding: 10px;
+     }
+     .search-holder  form > button[type="submit"] {
+        background-color: black;
+        color: white;
+        padding: 11px;
+        border: 0px;
+        margin-left: -5px;
+ }
+
+ .main-menu {
+    background-color: black;
+    color: white;
+
+ }
+
+ .main-menu > ul {
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+    display: flex; 
+    justify-content: start;
+
+ }
+
+ .main-menu > ul > li > a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: inline-block;
+
+ }
+
+ .main-menu > ul > li >  a:hover {
+background-color: orange;
+ }
+
+ .drop {
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+    display: none;
+
+ }
+
+ .drop > li > a {
+ color: white;
+ text-decoration: none;
+ padding: 15px;
+ background-color: teal;
+ display: inline-block;
+ width: 100%; }
+
+ .drop > li > a:hover {
+    background-color: orange;
+ }
+
+ .main-menu > ul > li:hover .drop {
+    display: block;
+ }
+
+ 
+</style>
+    
+
+</head>
+<body>
+    
+    <div class="container">
+
+        <!--main haeder--> 
+        <header class="main-header"> 
+
+            <div class="logo-header">   <!--logo holder-->
+              <a href="#">
+                <img src="./1600w-qJptouniZ0A.webp" alt="Lion king" width="200px">
+              </a>
+            </div>
+
+            <div class="search-holder"> <!--search-->
+                <form action="" method="get">
+                    <input type="search" name="s" placeholder="search for..">
+                    <button type="submit">Submit</button>
+                </form>  
+ </div>
+        </header>
+
+        <!--main menu-->
+        <nav class="main-menu">
+            <ul>
+                <li><a href="#">home</a></li>
+                <li><a href="#">Service</a></li>
+                <ul class="drop">
+                    <li><a href="#">Service one</a></li>
+                    <li><a href="#">Service two</a></li>
+                    <li><a href="#">Service three</a></li>
+                </ul>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+        </ul>
+        </nav>
+
+        <!--BANNER-->
+        <section class="banner-slider">
+            <ul>
+                <li><img src="https://placehold.co/1000x350.png" alt=""></li>
+                <li><img src="https://placehold.co/1000x350.png" alt=""></li>
+                <li><img src="https://placehold.co/1000x350.png" alt=""></li>
+            </ul>
+        </section>
+
+        <!--Banner slider-->
+        <!--Content holder-->
+        <section class="content-holder">
+            <main class="content">
+                <h1>Main heading</h1>
+                <h2>Sub heading</h2>
+                <p>Lorem ipsum dolor sit amet consectetur 
+                    adipisicing elit. Pariatur, distinctio 
+                    aliquid consequatur fugit quidem iusto,
+                     tempore optio facere doloribus necessitatibus 
+                     voluptate vitae voluptas minus perspiciatis et
+                      voluptatem qui neque non.</p>
+                <p>Lorem ipsum dolor sit amet consectetur 
+                    adipisicing elit. Pariatur, distinctio 
+                    aliquid consequatur fugit quidem iusto,
+                     tempore optio facere doloribus necessitatibus 
+                     voluptate vitae voluptas minus perspiciatis et
+                      voluptatem qui neque non</p>
+                <p>Lorem ipsum dolor sit amet consectetur 
+                    adipisicing elit. Pariatur, distinctio 
+                    aliquid consequatur fugit quidem iusto,
+                     tempore optio facere doloribus necessitatibus 
+                     voluptate vitae voluptas minus perspiciatis et
+                      voluptatem qui neque non</p>
+            </main>
+
+            <aside class="sidebar">
+                <div class="widget">
+                    <h3>follow us</h3>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</li>
+                        <li><a href="#">Instagram</li>
+                        <li><a href="#">Linkdin</a></li>
+                    </ul>
+
+                    <section class="footer-widget-holder">
+                        <div class="footer-widget">
+                            <a href="#">
+                                <img src="./1600w-qJptouniZ0A.webp" alt="logo" width="100px">
+                            </a>
+
+                            <h3>
+                                Address
+                            </h3>
+                            <address>12/A mathru layout bengaluru</address>
+                        </div>
+
+                         <div class="footer-widget">
+                            <h4>Sitemap</h4>
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Services</a></li>
+                                <li><a href="#">Products</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+
+                         </div>
+
+                         <div class="footer-widget">
+                            <h4>Sitemap</h4>
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Services</a></li>
+                                <li><a href="#">Products</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+
+                         </div>
+
+                         <div class="footer-widget">
+                            <h4>Sitemap</h4>
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Services</a></li>
+                                <li><a href="#">Products</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+
+                         </div>
+
+                         <footer class="site-footer">
+                            <p><small>Copyright &copy; 2025</small></p>
+                         </footer>
+                    </section>
+
+                </div>
+            </aside>
+        </section>
+
+    </div>
+</body>
+</html>

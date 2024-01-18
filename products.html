@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.min.css"/>
+
+
+</head>
+    <style>
+*{
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    margin: 0px;
+    background-color: aliceblue;
+}
+
+.container {
+    width: 1000px;
+    height: auto;
+    margin: 10px auto;
+    background-color: white;
+    border: 1px solid gainsboro;
+    box-shadow: 0px 0px 25px rgba(0,0,0,0.1);
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+}
+
+.search-holder form > input[type="search"]{
+    border: 1px solid gainsboro;
+    padding: 10px;
+}
+.search-holder form > button[type="submit"] {
+
+    background-color: black;
+    color: white;
+    padding: 11px;
+    border: 0px;
+margin-left: -5px;
+}
+
+.main-menu {
+    background-color: black;
+    color:white
+
+}
+
+.main-menu > ul {
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+    display: flex;
+    justify-content: start;
+}
+.main-menu > ul > li > a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: inline-block;
+}
+.main-menu > ul > li > a:hover {
+    background-color: orange;
+}
+
+.drop {
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+    position: absolute;
+    display: none;
+}
+
+.drop > li > a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    background-color: teal;
+    display: inline-block;
+    width: 100%;
+}
+
+.drop > li > a:hover{
+    background-color: orange;
+}
+
+.main-menu > ul > li:hover .drop {
+    display: block;
+}
+.lSPager {
+    margin-top: -25px !important;
+}
+.content-holder {
+    display:flex;
+    justify-content: space-between;
+    background-color: cornflowerblue;
+    border-bottom: 1px solid gainsboro;
+}
+.content-holder .content {
+    padding: 25px;
+    background-color: white;
+    width: 80%;
+}
+
+.content-holder .content h1 ~ h2 {
+    font-size: 1em;
+    color: darkgray;
+}
+
+.sidebar {
+    padding: 25px;
+    width: 20%;
+}
+
+.sidebar .widget h3 {
+    color: white;
+}
+.sidebar .widget ul ,
+.footer-widget ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.sidebar .widget ul > li > a ,
+.footer-widget ul > li > a{
+    color: white;
+    text-decoration: none;
+}
+.sidebar .widget ul > li > a:hover {
+    color: black;
+}
+.footer-widget-holder {
+    display:flex;
+    background-color: rgb(31, 31, 31);
+color: white;
+justify-content: space-around;
+}
+
+.footer-widget {
+    padding: 25px;
+    font-size: small;
+}
+
+.site-footer {
+    background-color: black;
+    color:white;
+    text-align: center;
+    padding: 25px;
+}
+
+.site-footer p {
+    margin: 0px;
+}
+.products-holder, 
+.services-holder {
+    display: grid;
+    grid-template-columns: auto auto auto ;
+
+
+}
+.product,
+.service {
+    padding: 20px;
+    border: 1px solid gainsboro;
+
+}
+.product a,
+.service a {
+    text-decoration: none;
+    color: teal;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+}
+    </style>
+</head>
+<body>
+    
+<div class="container">
+    <header class="main-header">
+        <div class="logo-holder">
+            <a href="#">
+                <img src="./1600w-qJptouniZ0A.webp" alt="logo" width="50px">
+            </a>
+        </div>
+
+        <div class="search-holder">
+            <form action="" method="get">
+                <input type="search" name="s" placeholder="search for..">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </header>
+
+    <!--nav-->
+
+    <nav class="main-menu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Service</a>
+            <ul class="drop">
+                <li><a href="#">Service one</a></li>
+                <li><a href="#">Service Two</a></li>
+                <li><a href="#">Service Three</a></li>
+            </ul>
+            </li>
+            <li><a href="#">Product</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+ </ul>
+ </nav>
+
+ 
+<!--Service holder-->
+<section class="products-holder">
+    <article class="product">
+        <img src="https://placehold.co/600x315">
+        <h3>product one</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, ipsam inventore quas vel 
+            asperiores quod facilis
+             est rem assumenda. Fugit natus aperiam vero nam dolore pariatur inventore porro, dolores quae.</p>
+             <a href="#">Read more</a>
+    </article>
+
+    <article class="product">
+        <img src="https://placehold.co/600x315">
+        <h3>product two</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, ipsam inventore quas vel 
+            asperiores quod facilis
+             est rem assumenda. Fugit natus aperiam vero nam dolore pariatur inventore porro, dolores quae.</p>
+             <a href="#">Read more</a>
+    </article>
+
+    <article class="product">
+        <img src="https://placehold.co/600x315">
+        <h3>product three</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, ipsam inventore quas vel 
+            asperiores quod facilis
+             est rem assumenda. Fugit natus aperiam vero nam dolore pariatur inventore porro, dolores quae.</p>
+             <a href="#">Read more</a>
+    </article>
+
+    <article class="product">
+        <img src="https://placehold.co/600x315">
+        <h3>product four</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, ipsam inventore quas vel 
+            asperiores quod facilis
+             est rem assumenda. Fugit natus aperiam vero nam dolore pariatur inventore porro, dolores quae.</p>
+             <a href="#">Read more</a>
+    </article>
+
+    <article class="product">
+        <img src="https://placehold.co/600x315">
+        <h3>product five</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, ipsam inventore quas vel 
+            asperiores quod facilis
+             est rem assumenda. Fugit natus aperiam vero nam dolore pariatur inventore porro, dolores quae.</p>
+             <a href="#">Read more</a>
+    </article>
+
+    <article class="product">
+        <img src="https://placehold.co/600x315">
+        <h3>product six</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, ipsam inventore quas vel 
+            asperiores quod facilis
+             est rem assumenda. Fugit natus aperiam vero nam dolore pariatur inventore porro, dolores quae.</p>
+             <a href="#">Read more</a>
+    </article>
+</section>
+ 
+    
+
+ <!--footer-->
+ <section class="footer-widget-holder">
+    <div class="footer-widget">
+        <a href="#">
+            <img src="./1600w-qJptouniZ0A.webp" width="50px" alt="logo">
+        </a>
+        <h3>Address</h3>
+        <address>
+            #12/ A pushpagiri
+        </address>
+    </div>
+
+    <div class="footer-widget">
+        <h4>Sitemap</h4>
+        <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">service</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        </ul>
+        </div>
+
+        <div class="footer-widget">
+        <h4>Sitemap</h4>
+        <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">service</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        </ul>
+        </div>
+        <div class="footer-widget">
+        <h4>Sitemap</h4>
+        <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">service</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+ </section>
+
+ <footer class="site-footer">
+    <p><small>Copyright &copy</small></p>
+ </footer>
+</div>
+
+<script src ="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js"></script>
+<script>
+    $(document).ready(function() {
+    $('#adaptive').lightSlider({
+        adaptiveHeight:true,
+        item:1,
+        slideMargin:0,
+        loop:true
+    });
+});
+</script>
+
+
+</body>
+</html>
